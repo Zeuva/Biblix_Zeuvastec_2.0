@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>BIBLIX Zeuvastec — Perguntas Bíblicas</title>
+<meta name="description" content="Jogo de perguntas e respostas bíblicas. Jogue sozinho ou com amigos em tempo real, com som e efeitos visuais." />
+<meta name="theme-color" content="#14110d" />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="icon-192.png" />
+<link rel="apple-touch-icon" href="icon-192.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="app"></div>
+
+<script src="questions.js"></script>
+<script src="app.js"></script>
+<script src="solo.js"></script>
+<script src="multiplayer.js"></script>
+<script src="multiplayer-ui.js"></script>
+<script src="main.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js', { scope: '/' }).catch(() => {});
+}
+</script>
+</body>
+</html>
